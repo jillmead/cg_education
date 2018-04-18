@@ -2,26 +2,49 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 
-.navbar {
-  display: inline-block;
-  padding-bottom: 20px;
+.navbar_container {
+  display: flex;
+  padding-bottom: 5px;
   width: 100%;
+  align-items: center;
+  border-bottom: solid 1.25px #696969;
+  margin-bottom: 10px;
 }
 
-.navbar h1 {
-  display: inline-block;
-  font-size: 1.0em;
-  float: left;
+.navbar_left {
+  font-size: 1.2em;
+  margin-right: auto;
+  margin-top: 0.70em;
+  margin-bottom: 10px;
   padding-left: 10px;
+  font-weight: normal;
+  color: #696969;
 }
 
-.navbar li {
-  display: inline;
-  float: right;
+.navbar_right {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+}
+
+.navbar_right li {
   list-style: none;
   margin: 0;
   padding-left: 5px;
+  padding-right: 5px;
   text-transform: uppercase;
+}
+
+.navbar_right a {
+  text-decoration: none;
+}
+
+.navbar_right a:active {
+  color: #00CED1;
+}
+
+.navbar_right a:visited {
+  color: #696969;
 }
 
 .teacher_profiles_container {
@@ -31,36 +54,31 @@ body {
   justify-content: center;
 }
 
-.profile {
+.profile_container {
   background-color: #eeeeee;
-  border-color: #303030;
-  border: solid;
-  border-width: 1px;
+  display: flex;
+  flex-wrap: wrap;
   margin: 20px;
   width: 400px;
 }
 
-.box-top {
-  vertical-align: top;
-}
-
-.box-bottom {
-  display: inline-flex;
+.box_top_container {
+  display: flex;
   width: 100%;
-}
-
-.photo_name_subject {
-  border-color: #303030;
-  border: solid;
-  border-width: 0.5px;
+  vertical-align: top;
+  border: solid 0.5px #696969;
   padding: 10px;
 }
 
-.teacher_photo {
+.box_top_left {
   float: left;
+  width: 30%;
+}
+
+.teacher_photo {
   width: 20%;
   border: solid;
-  border-color: #303030;
+  border-color: #696969;
   border-radius: 100%;
   min-width: 100px;
   border: 1px;
@@ -68,39 +86,59 @@ body {
   vertical-align: middle;
 }
 
-.courses {
-  border-color: #303030;
-  border: solid;
-  border-width: 0.5px;
+.box_top_right {
+  margin-left: auto;
+  width: 60%;
+}
+
+.box_top_right h2 {
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+.box_top_right h3 {
+  margin-top: 5px;
+  font-weight: normal;
+  font-size: 1.0em;
+}
+
+.box_bottom_container {
+  display: flex;
+  width: 100%;
+}
+
+.box_bottom_container h4 {
+  font-weight: bold;
+}
+
+.courses_left {
+  border-left: solid 0.5px #696969;
+  border-bottom: solid 0.5px #696969;
   padding: 20px;
   width: 50%;
   text-align: center;
 }
 
-.courses p {
+.courses_left p {
   margin-bottom: 0;
   margin-top: 0;
 }
 
-.courses h4 {
+.courses_left h4 {
   margin: 5px;
 }
 
-.rating {
-  border-color: #303030;
-  border: solid;
-  border-width: 0.5px;
-  padding: 10px;
+.rating_right {
+  border-left: solid 0.5px #696969;
+  border-right: solid 0.5px #696969;
+  border-bottom: solid 0.5px #696969;
+  padding: 20px;
   width: 50%;
   text-align: center;
 }
 
-.rating h4 {
+.rating_right h4 {
   margin: 5px;
-}
-
-.box_bottom h4 {
-  font-weight: bold;
 }
 
 /*STUDENTS*/
@@ -114,22 +152,17 @@ body {
 .student_profile {
   width: 25%;
   background-color: #eeeeee;
-  border-color: #303030;
-  border: solid;
-  border-width: 1px;
+  border: solid 0.5px #696969;
   margin: 20px;
-  min-width: 400px;
+  min-width: 200px;
 }
 
 .student_profile_top {
-  border-color: #303030;
-  border: solid;
-  border-width: 1px;
   text-align: center;
 }
 
 .student_photo {
-  border: solid;
+  border: solid 0.5px #696969;
   border-radius: 100%;
   float: center;
   width: 20%;
@@ -139,13 +172,23 @@ body {
 
 .student_profile_top h2 {
   font-weight: bold;
+  font-size: 1.0em;
+  padding-top: 10px;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+.student_profile_top h3 {
+  font-size: 0.8em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
 }
 
 .student_profile_bottom {
-  border-color: #303030;
-  border: solid;
-  border-width: 1px;
-  padding: 8%;
+  border-top: solid 0.5px #696969;
+  padding: 4%;
 }
 .student_row {
   padding-bottom: 10px;
@@ -154,82 +197,116 @@ body {
 .student_cell_left {
   display: table-cell;
   font-weight: bold;
-  min-width: 100px;
+  font-size: 0.8em;
+  min-width: 70px;
   text-align: right;
   padding-right: 5%;
+}
+
+.student_cell_left p {
+  margin-bottom: 0;
+  margin-top: 0;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
 }
 
 .student_cell_right {
   display: table-cell;
   text-align: left;
-  padding-left: 10%;
+  font-size: 0.8em;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
 }
 
 .student_cell_right p {
   margin-bottom: 0;
   margin-top: 0;
   min-width: 150px;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
 }
 
 /*COURSES*/
 
 .course_info_container {
   display: flex;
-  flex-wrap: wrap;
   flex-flow: column wrap;
-  margin: auto;
-  flex-direction: column;
-  align-items: center;
 }
 
 .course_info_box {
   display: flex;
   background-color: #eeeeee;
   margin: 5px;
-  width: 40%;
+  width: 45%;
+  min-width: 250px;
+  border: solid 1px #696969;
 }
 
 .course_info_left {
   display: flex;
   flex-direction: column;
-  padding-left: 30px;
+  padding-left: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
   width: 33%;
-  max-height: 100px;
 }
 
 .course_info_left_top h2 {
-  margin-bottom: 10px;
-  margin-top: 24px;
+  padding-top: 4px;
+  font-size: 1.0em;
+  font-weight: normal;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
 }
 
 .course_info_left_bottom h3 {
-  margin-top: 10px;
+  padding-bottom: 4px;
+  font-size: 0.8em;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
 }
 
 .course_info_right {
   display: flex;
   flex-direction: column;
   padding-left: 10px;
-  width: 60%
+  padding-right: 10px;
+  width: 50%;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-items: center;
 }
 
 .course_info_teacher {
-  padding-top: 10px;
-  padding-bottom: 5px;
+  display: flex;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .course_info_semester {
-  padding-top: 5px;
-  padding-bottom: 10px;
+  display: flex;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .course_info_right h4 {
   font-weight: bold;
-  margin: 0;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-right: 4px;
+  font-size: 0.8em;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
 }
 
 .course_info_right p {
-  margin: 0;
+  font-size: 0.8em;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+@media screen and (max-width:600px) {
+  .course_info_container {
+    flex-wrap: no-wrap;
+    align-items: center;
+  }
 }
