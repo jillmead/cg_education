@@ -1,5 +1,3 @@
-//teachers
-
 var teacherName = "Sally Jones";
 var teacherDepartment = "Physics";
 var teacherRatings = [4.5, 4.7, 4.3];
@@ -24,7 +22,7 @@ var userReview = Number(prompt('We would like for you to review . Please enter a
     addTeacherRating(teacherRatings,userReview);
     alert('Thanks for your review! ' + teacherName + "\'s average rating is now " + getRatingAvg(teacherRatings) + ".");
   } else {
-    prompt('Please enter a number between 0.0 and 5.0');
+    userReview = prompt('Oops! Not a number between 0.0 and 5.0. Please try again.');
       if (userReview >= 0.0 && userReview <= 5.0) {
       addTeacherRating(teacherRatings,userReview);
       alert('Thanks for your review! ' + teacherName + "\'s average rating is now " + getRatingAvg(teacherRatings) + ".");
